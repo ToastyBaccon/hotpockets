@@ -2,16 +2,39 @@
 <html>
   <head>
     <title>Hot Pocket Fan Club</title>
-      <style>
-    /* This creates the animation instructions */
+     <style>
+    body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden; /* Keeps the scrollbars from appearing */
+        background-color: #000; /* Black background makes it look cooler */
+    }
+
+    .spinner {
+        position: absolute;
+        width: 200px;
+        /* The animation: Move X and Move Y at different speeds for the bounce effect */
+        animation: moveX 4s linear infinite alternate, 
+                   moveY 3.2s linear infinite alternate, 
+                   spin 2s linear infinite;
+    }
+
+    /* Horizontal movement */
+    @keyframes moveX {
+        from { left: 0; }
+        to { left: calc(100vw - 200px); } /* screen width minus image width */
+    }
+
+    /* Vertical movement */
+    @keyframes moveY {
+        from { top: 0; }
+        to { top: calc(100vh - 150px); } /* screen height minus image height */
+    }
+
+    /* Keep your spin! */
     @keyframes spin {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
-    }
-
-    /* This applies the animation to your image */
-    .spinner {
-        animation: spin 3s linear infinite;
     }
 </style>
   </head>
@@ -21,6 +44,7 @@
     <p>Look hotpockets</p>
   </body>
 </html>
+
 
 
 
