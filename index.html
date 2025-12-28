@@ -3,11 +3,24 @@
   <head>
     <title>Hot Pocket Fan Club</title>
   </head>
+  <style>
+    /* This creates the animation instructions */
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    /* This applies the animation to your image */
+    .spinner {
+        animation: spin 3s linear infinite;
+    }
+</style>
   <body>
     <h1>Hot Pockets Are Life</h1>
-    <img src="https://images.heb.com/is/image/HEBGrocery/000138475-1?jpegSize=150&hei=1400&fit=constrain&qlt=75&v=1" width="300" alt="Hot Pockets Box">
+    <img src="https://images.heb.com/is/image/HEBGrocery/000138475-1?jpegSize=150&hei=1400&fit=constrain&qlt=75&v=1" class="spinner" width="300" alt="Hot Pockets Box">
     <p>Look hotpockets</p>
   </body>
 </html>
+
 
 
