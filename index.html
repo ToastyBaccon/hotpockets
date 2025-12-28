@@ -18,7 +18,26 @@
                    moveY 3.2s linear infinite alternate, 
                    spin 10s linear infinite;
     }
+.fading-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text perfectly */
+    font-size: 5rem;
+    font-weight: bold;
+    color: #C1121C; /* Hot Pocket Red */
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+    opacity: 0; /* Starts invisible */
+    
+    /* Animation: name, duration, timing, delay, fill-mode */
+    animation: fadeIn 2s ease-in forwards;
+    animation-delay: 6s; 
+}
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
     /* Horizontal movement */
     @keyframes moveX {
         from { left: 0; }
@@ -40,10 +59,12 @@
   </head>
   <body>
     <h1>Hot Pockets Are Life</h1>
+    <div class="fading-text">HOTPOCKETS</div>
     <img src="https://images.heb.com/is/image/HEBGrocery/000138475-1?jpegSize=150&hei=1400&fit=constrain&qlt=75&v=1" class="spinner" width="300" alt="Hot Pockets Box">
     <p>Look hotpockets</p>
   </body>
 </html>
+
 
 
 
